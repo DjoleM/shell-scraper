@@ -1,0 +1,1 @@
+cat list.txt | grep ^^^<li | sed s/^<[^^^>]*^>//g | sed s/^([^^^)]*^)//g | sed s/[^^A-Za-z' ']//g | sed s/Mr' '/Mr^./g | sed s/Mrs' '/Mrs^./g | sed s/The' '//g | sed s/Count' '// | sed s/Lady' '//g | cut -d' ' -f1 | sort | uniq -c | sort --reverse
